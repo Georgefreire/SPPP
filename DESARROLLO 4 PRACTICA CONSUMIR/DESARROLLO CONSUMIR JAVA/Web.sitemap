@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode url="Default.aspx" title="Inicio" >
+
+   
+
+
+
+
+    <siteMapNode url="" title="Ingresar"  description="Ingresar" >
+      
+      <siteMapNode url="Datos/InsertarCategoria.aspx" title="Nueva Categoria"  description="Nueva Categoria"  />
+
+      <siteMapNode url="Datos/InsertarProductos.aspx" title="Nuevo Producto"  description="Nuevo Producto" >
+              </siteMapNode>
+
+
+     
+
+    </siteMapNode>
+
+
+    <siteMapNode url="" title="Configuración"  description="Configuración" >
+      <siteMapNode url="Datos/EditarCategoria.aspx" title="Editar Categoria"  description="Editar Categoria" />
+
+      <siteMapNode url="Datos/EditarProducto.aspx" title="Editar Productos"  description="Editar Productos" />
+
+        <siteMapNode url="Datos/EliminarProductos.aspx" title="Eliminar Productos"  description="Eliminar Productos" >
+
+        </siteMapNode>
+
+    </siteMapNode>
+  </siteMapNode>
+  
+  
+  
+</siteMap>

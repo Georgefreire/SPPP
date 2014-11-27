@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicio/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="DMLService" targetNamespace="http://Servicio/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/JAVASERVICE/DMLService?xsd=1" namespace="http://Servicio/" />
+    </xsd:schema>
+  </types>
+  <message name="SelectProductosTotal">
+    <part name="parameters" element="tns:SelectProductosTotal" />
+  </message>
+  <message name="SelectProductosTotalResponse">
+    <part name="parameters" element="tns:SelectProductosTotalResponse" />
+  </message>
+  <message name="SELECTCATEGORIASPK">
+    <part name="parameters" element="tns:SELECTCATEGORIASPK" />
+  </message>
+  <message name="SELECTCATEGORIASPKResponse">
+    <part name="parameters" element="tns:SELECTCATEGORIASPKResponse" />
+  </message>
+  <message name="SelectCategorias">
+    <part name="parameters" element="tns:SelectCategorias" />
+  </message>
+  <message name="SelectCategoriasResponse">
+    <part name="parameters" element="tns:SelectCategoriasResponse" />
+  </message>
+  <message name="SelectProductos">
+    <part name="parameters" element="tns:SelectProductos" />
+  </message>
+  <message name="SelectProductosResponse">
+    <part name="parameters" element="tns:SelectProductosResponse" />
+  </message>
+  <message name="deleteCategorias">
+    <part name="parameters" element="tns:deleteCategorias" />
+  </message>
+  <message name="deleteCategoriasResponse">
+    <part name="parameters" element="tns:deleteCategoriasResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="deleteProductos">
+    <part name="parameters" element="tns:deleteProductos" />
+  </message>
+  <message name="deleteProductosResponse">
+    <part name="parameters" element="tns:deleteProductosResponse" />
+  </message>
+  <message name="InsertarCategorias">
+    <part name="parameters" element="tns:InsertarCategorias" />
+  </message>
+  <message name="InsertarCategoriasResponse">
+    <part name="parameters" element="tns:InsertarCategoriasResponse" />
+  </message>
+  <message name="InsertarProductos">
+    <part name="parameters" element="tns:InsertarProductos" />
+  </message>
+  <message name="InsertarProductosResponse">
+    <part name="parameters" element="tns:InsertarProductosResponse" />
+  </message>
+  <message name="UpdateCategorias">
+    <part name="parameters" element="tns:UpdateCategorias" />
+  </message>
+  <message name="UpdateCategoriasResponse">
+    <part name="parameters" element="tns:UpdateCategoriasResponse" />
+  </message>
+  <message name="SelectProductosPK">
+    <part name="parameters" element="tns:SelectProductosPK" />
+  </message>
+  <message name="SelectProductosPKResponse">
+    <part name="parameters" element="tns:SelectProductosPKResponse" />
+  </message>
+  <message name="UpdateProductos">
+    <part name="parameters" element="tns:UpdateProductos" />
+  </message>
+  <message name="UpdateProductosResponse">
+    <part name="parameters" element="tns:UpdateProductosResponse" />
+  </message>
+  <portType name="DML">
+    <operation name="SelectProductosTotal">
+      <input wsam:Action="http://Servicio/DML/SelectProductosTotalRequest" message="tns:SelectProductosTotal" />
+      <output wsam:Action="http://Servicio/DML/SelectProductosTotalResponse" message="tns:SelectProductosTotalResponse" />
+    </operation>
+    <operation name="SELECTCATEGORIASPK">
+      <input wsam:Action="http://Servicio/DML/SELECTCATEGORIASPKRequest" message="tns:SELECTCATEGORIASPK" />
+      <output wsam:Action="http://Servicio/DML/SELECTCATEGORIASPKResponse" message="tns:SELECTCATEGORIASPKResponse" />
+    </operation>
+    <operation name="SelectCategorias">
+      <input wsam:Action="http://Servicio/DML/SelectCategoriasRequest" message="tns:SelectCategorias" />
+      <output wsam:Action="http://Servicio/DML/SelectCategoriasResponse" message="tns:SelectCategoriasResponse" />
+    </operation>
+    <operation name="SelectProductos">
+      <input wsam:Action="http://Servicio/DML/SelectProductosRequest" message="tns:SelectProductos" />
+      <output wsam:Action="http://Servicio/DML/SelectProductosResponse" message="tns:SelectProductosResponse" />
+    </operation>
+    <operation name="deleteCategorias">
+      <input wsam:Action="http://Servicio/DML/deleteCategoriasRequest" message="tns:deleteCategorias" />
+      <output wsam:Action="http://Servicio/DML/deleteCategoriasResponse" message="tns:deleteCategoriasResponse" />
+      <fault wsam:Action="http://Servicio/DML/deleteCategorias/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="deleteProductos">
+      <input wsam:Action="http://Servicio/DML/deleteProductosRequest" message="tns:deleteProductos" />
+      <output wsam:Action="http://Servicio/DML/deleteProductosResponse" message="tns:deleteProductosResponse" />
+    </operation>
+    <operation name="InsertarCategorias">
+      <input wsam:Action="http://Servicio/DML/InsertarCategoriasRequest" message="tns:InsertarCategorias" />
+      <output wsam:Action="http://Servicio/DML/InsertarCategoriasResponse" message="tns:InsertarCategoriasResponse" />
+    </operation>
+    <operation name="InsertarProductos">
+      <input wsam:Action="http://Servicio/DML/InsertarProductosRequest" message="tns:InsertarProductos" />
+      <output wsam:Action="http://Servicio/DML/InsertarProductosResponse" message="tns:InsertarProductosResponse" />
+    </operation>
+    <operation name="UpdateCategorias">
+      <input wsam:Action="http://Servicio/DML/UpdateCategoriasRequest" message="tns:UpdateCategorias" />
+      <output wsam:Action="http://Servicio/DML/UpdateCategoriasResponse" message="tns:UpdateCategoriasResponse" />
+    </operation>
+    <operation name="SelectProductosPK">
+      <input wsam:Action="http://Servicio/DML/SelectProductosPKRequest" message="tns:SelectProductosPK" />
+      <output wsam:Action="http://Servicio/DML/SelectProductosPKResponse" message="tns:SelectProductosPKResponse" />
+    </operation>
+    <operation name="UpdateProductos">
+      <input wsam:Action="http://Servicio/DML/UpdateProductosRequest" message="tns:UpdateProductos" />
+      <output wsam:Action="http://Servicio/DML/UpdateProductosResponse" message="tns:UpdateProductosResponse" />
+    </operation>
+  </portType>
+  <binding name="DMLPortBinding" type="tns:DML">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="SelectProductosTotal">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SELECTCATEGORIASPK">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SelectCategorias">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SelectProductos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteCategorias">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteProductos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="InsertarCategorias">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="InsertarProductos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UpdateCategorias">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SelectProductosPK">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UpdateProductos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="DMLService">
+    <port name="DMLPort" binding="tns:DMLPortBinding">
+      <soap:address location="http://localhost:8080/JAVASERVICE/DMLService" />
+    </port>
+  </service>
+</definitions>

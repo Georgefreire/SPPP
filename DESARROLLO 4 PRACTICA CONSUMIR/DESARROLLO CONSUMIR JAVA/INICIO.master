@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="INICIO.master.cs" Inherits="INICIO" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            clear: both;
+            width: 1100px;
+            height: 16px;
+            text-align: center;
+            background: #8A0808;
+            color: #FFFFFF;
+            font-weight: 700;
+            border-radius: 0px 0px 20px 20px;
+        }
+        .style3
+        {
+            color: #FFFFFF;
+        }
+        .style4
+        {
+            width: 100%;
+            height: 33px;
+        }
+        .style5
+        {
+            width: 953px;
+            height: 27px;
+        }
+        .style6
+        {
+            height: 27px;
+        }
+    </style>
+</head>
+<body>
+    <form id="Form1" runat="server">
+
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </asp:ToolkitScriptManager>
+
+    <div class="page">
+        <div class="header">
+            <div class="loginDisplay">
+                <asp:Image ID="Image1" runat="server" Height="130px" ImageAlign="Middle" 
+                    ImageUrl="~/Images/logo dibesauConfondo.jpg" style="margin-right : 0px" 
+                    Width="1070px" />
+            </div>
+        
+               <br />
+            <div class="clear hideSkiplink">
+                <table align="right" class="style4">
+                    <tr>
+                    
+                        <td class="style5">
+                            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                        </td>
+                     
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                <p>
+                    <br />
+                <p>
+                    &nbsp;</p>
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="menu" style="background-color: #A9A9F5">
+            UTA-&nbsp; SISTEMA&nbsp; DIBESAU</div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>

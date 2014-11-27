@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicio/" targetNamespace="http://Servicio/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Exception" type="tns:Exception" />
+  <xs:element name="InsertarCategorias" type="tns:InsertarCategorias" />
+  <xs:element name="InsertarCategoriasResponse" type="tns:InsertarCategoriasResponse" />
+  <xs:element name="InsertarProductos" type="tns:InsertarProductos" />
+  <xs:element name="InsertarProductosResponse" type="tns:InsertarProductosResponse" />
+  <xs:element name="SELECTCATEGORIASPK" type="tns:SELECTCATEGORIASPK" />
+  <xs:element name="SELECTCATEGORIASPKResponse" type="tns:SELECTCATEGORIASPKResponse" />
+  <xs:element name="SelectCategorias" type="tns:SelectCategorias" />
+  <xs:element name="SelectCategoriasResponse" type="tns:SelectCategoriasResponse" />
+  <xs:element name="SelectProductos" type="tns:SelectProductos" />
+  <xs:element name="SelectProductosPK" type="tns:SelectProductosPK" />
+  <xs:element name="SelectProductosPKResponse" type="tns:SelectProductosPKResponse" />
+  <xs:element name="SelectProductosResponse" type="tns:SelectProductosResponse" />
+  <xs:element name="SelectProductosTotal" type="tns:SelectProductosTotal" />
+  <xs:element name="SelectProductosTotalResponse" type="tns:SelectProductosTotalResponse" />
+  <xs:element name="UpdateCategorias" type="tns:UpdateCategorias" />
+  <xs:element name="UpdateCategoriasResponse" type="tns:UpdateCategoriasResponse" />
+  <xs:element name="UpdateProductos" type="tns:UpdateProductos" />
+  <xs:element name="UpdateProductosResponse" type="tns:UpdateProductosResponse" />
+  <xs:element name="deleteCategorias" type="tns:deleteCategorias" />
+  <xs:element name="deleteCategoriasResponse" type="tns:deleteCategoriasResponse" />
+  <xs:element name="deleteProductos" type="tns:deleteProductos" />
+  <xs:element name="deleteProductosResponse" type="tns:deleteProductosResponse" />
+  <xs:complexType name="UpdateProductos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element name="arg1" type="xs:int" />
+      <xs:element minOccurs="0" name="arg2" type="xs:string" />
+      <xs:element name="arg3" type="xs:double" />
+      <xs:element name="arg4" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UpdateProductosResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SelectCategorias">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="SelectCategoriasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:categorias" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="categorias">
+    <xs:sequence>
+      <xs:element name="categoryID" type="xs:int" />
+      <xs:element minOccurs="0" name="categoryName" type="xs:string" />
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarCategorias">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarCategoriasResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SelectProductos">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SelectProductosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:productos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="productos">
+    <xs:sequence>
+      <xs:element name="categoryID" type="xs:int" />
+      <xs:element name="discontinued" type="xs:int" />
+      <xs:element name="productID" type="xs:int" />
+      <xs:element minOccurs="0" name="productName" type="xs:string" />
+      <xs:element minOccurs="0" name="quantityPerUnit" type="xs:string" />
+      <xs:element name="unitPrice" type="xs:float" />
+      <xs:element name="unitsInStock" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteProductos">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteProductosResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteCategorias">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteCategoriasResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SELECTCATEGORIASPK">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SELECTCATEGORIASPKResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SelectProductosTotal">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="SelectProductosTotalResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:productos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SelectProductosPK">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SelectProductosPKResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UpdateCategorias">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element name="arg2" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UpdateCategoriasResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarProductos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element name="arg1" type="xs:int" />
+      <xs:element minOccurs="0" name="arg2" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarProductosResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{296B12D6-3034-4AE0-AF5E-A953237E0BC1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SPPP</RootNamespace>
+    <AssemblyName>SPPP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="Npgsql, Version=2.2.1.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\The Npgsql Development Team\Npgsql\Npgsql-2.2.1.0-net45\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuscarEntidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarEntidad.Designer.cs">
+      <DependentUpon>BuscarEntidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarEstudiante.Designer.cs">
+      <DependentUpon>BuscarEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarResponsable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarResponsable.Designer.cs">
+      <DependentUpon>BuscarResponsable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConexionBDD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConexionBDD.Designer.cs">
+      <DependentUpon>ConexionBDD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoEntidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresoEntidad.Designer.cs">
+      <DependentUpon>IngresoEntidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresoEstudiante.Designer.cs">
+      <DependentUpon>IngresoEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoPract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresoPract.Designer.cs">
+      <DependentUpon>IngresoPract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoPractica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresoPractica.Designer.cs">
+      <DependentUpon>IngresoPractica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoResponsable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresoResponsable.Designer.cs">
+      <DependentUpon>IngresoResponsable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IniciarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IniciarSesion.Designer.cs">
+      <DependentUpon>IniciarSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoPPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoPPP.Designer.cs">
+      <DependentUpon>MantenimientoPPP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opciones.Designer.cs">
+      <DependentUpon>Opciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BuscarEntidad.resx">
+      <DependentUpon>BuscarEntidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarEstudiante.resx">
+      <DependentUpon>BuscarEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarResponsable.resx">
+      <DependentUpon>BuscarResponsable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConexionBDD.resx">
+      <DependentUpon>ConexionBDD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresoEntidad.resx">
+      <DependentUpon>IngresoEntidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresoEstudiante.resx">
+      <DependentUpon>IngresoEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresoPract.resx">
+      <DependentUpon>IngresoPract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresoPractica.resx">
+      <DependentUpon>IngresoPractica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresoResponsable.resx">
+      <DependentUpon>IngresoResponsable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniciarSesion.resx">
+      <DependentUpon>IniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoPPP.resx">
+      <DependentUpon>MantenimientoPPP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opciones.resx">
+      <DependentUpon>Opciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{ead50a3c-4b7f-403b-bf66-8b367bcb86b2}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{8c00688e-77ea-4a31-86e1-a9d986d7e6a8}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-button-cancel-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-dialog-ok-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-user-group-properties-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File-new-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pencil-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Refresh-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-user-group-new-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-user-group-properties-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-user-group-delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-project-open-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\company-building-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
